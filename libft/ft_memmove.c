@@ -6,7 +6,7 @@
 /*   By: liglesia <liglesia@student.madrid42.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 12:36:25 by liglesia          #+#    #+#             */
-/*   Updated: 2022/03/26 16:57:46 by liglesia         ###   ########.fr       */
+/*   Updated: 2022/07/20 15:57:17 by liglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,4 +53,11 @@ int main(void)
     printf("%p", memmove(str1, str2, n)); // La función oficial
     return (0);
 }
+
+ The memmove() function copies len bytes from string src to string dst.
+     The two strings may overlap; the copy is always done in a non-destructive
+     manner.
+
+RETURN VALUES
+     The memmove() function returns the original value of dst
 */

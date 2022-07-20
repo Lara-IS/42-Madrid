@@ -3,36 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: liglesia <liglesia@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: liglesia <liglesia@student.madrid42.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 18:31:05 by liglesia          #+#    #+#             */
-/*   Updated: 2022/04/04 19:41:24 by liglesia         ###   ########.fr       */
+/*   Updated: 2022/07/20 17:55:44 by liglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t
-ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t i;
-	size_t j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = 0;
 	if (i < dstsize)
+	{
 		while (dst[i] != '\0')
 		{
-			i++;
-		}
-	while ((src[j] != '\0') && ((i + j) < (dstsize)))
-	{
-		dst[i] = src[j];
+			if (src[j] != '\0')
+			{
+				dst[i] = src[j];
+				j++;
+			}
 		i++;
-		j++;
+		}
+		dst[i + 1] = '\0';
 	}
-	dst[i + 1] = '\0';
-	return (dstsize);
+	return (ft_strlen(dst) + ft_strlen(src));
 }
 
 int main(void)
@@ -48,3 +48,7 @@ int main(void)
 	// printf("oficial: %d\n", strlcat(dst, src, dstsize));
 	return (0);
 }
+
+/* functions return the total length of the string they tried to create.
+	 For strlcat() that means the initial length of dst plus
+     the length of src */

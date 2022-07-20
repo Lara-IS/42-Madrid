@@ -1,38 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: liglesia <liglesia@student.madrid42.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/24 16:59:32 by liglesia          #+#    #+#             */
-/*   Updated: 2022/03/26 16:58:07 by liglesia         ###   ########.fr       */
+/*   Created: 2022/03/24 16:40:26 by liglesia          #+#    #+#             */
+/*   Updated: 2022/07/20 14:05:47 by liglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(char *str)
+int	ft_isprint(int c)
 {
-	size_t	len;
-	int		i;
-
-	len = 0;
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-		len++;
-	}
-	return (len);
+	if (c >= 32 && c <= 126)
+		return (1);
+	else
+		return (0);
 }
 
 /*
+#include <stdio.h>
+#include <stdio.h>
+#include <ctype.h>
+
 int main(void)
 {
-	char str[] = "Ay Ay que ya me sale"; 
-	
-    printf("%lu\n", ft_strlen(str));
-	printf("%lu", strlen(str)); // La función oficial
+	int c; 
+	c = 130;
+    printf("%d\n", ft_isprint(c));
+	printf("%d", isprint(c)); // La función oficial
     return (0);
+
+ The isprint() function tests for any printing character, including space (` ').  The
+     value of the argument must be representable as an unsigned char or the value of EOF.
+	 40 - 152	
 } */
