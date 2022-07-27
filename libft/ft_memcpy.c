@@ -6,7 +6,7 @@
 /*   By: liglesia <liglesia@student.madrid42.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 20:05:46 by liglesia          #+#    #+#             */
-/*   Updated: 2022/07/27 15:27:34 by liglesia         ###   ########.fr       */
+/*   Updated: 2022/07/27 16:24:22 by liglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,15 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		aux1[i] = aux2[i];
-		i++;
+		if ((aux1[i] != '\0') && (aux2[i] != '\0'))
+		{
+			aux1[i] = aux2[i];
+			i++;
+		}
 	}
 	return (0);
 }
+
 /*
 int main(void)
 {

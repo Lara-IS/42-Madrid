@@ -6,7 +6,7 @@
 /*   By: liglesia <liglesia@student.madrid42.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 12:36:25 by liglesia          #+#    #+#             */
-/*   Updated: 2022/07/20 15:57:17 by liglesia         ###   ########.fr       */
+/*   Updated: 2022/07/27 16:20:27 by liglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memmove(void *str1, const void *str2, size_t n)
 	aux1 = str1;
 	aux2 = str2;
 	i = 0;
-	if (*aux1 - *aux2 < 0)
+	if ((aux1[i] != '\0') && (aux2[i] != '\0') && ((*aux1 - *aux2) < 0))
 	{
 		while (i < n)
 		{
@@ -29,7 +29,7 @@ void	*ft_memmove(void *str1, const void *str2, size_t n)
 			i++;
 		}
 	}
-	else
+	if ((aux1[i] != '\0') && (aux2[i] != '\0') && ((*aux1 - *aux2) > 0))
 	{
 		i = n - 1;
 		while (i >= 0)

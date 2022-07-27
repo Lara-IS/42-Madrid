@@ -6,11 +6,16 @@
 /*   By: liglesia <liglesia@student.madrid42.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 16:49:00 by liglesia          #+#    #+#             */
-/*   Updated: 2022/07/27 15:28:10 by liglesia         ###   ########.fr       */
+/*   Updated: 2022/07/27 16:20:54 by liglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* [fail]: your strlcpy does not works with basic input
+[fail]: your strlcpy overflow the dest
+[fail]: your strlcpy does works whe size < strlen(src)
+[fail]: your strlcpy does not works with 0-length string */
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {

@@ -1,48 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: liglesia <liglesia@student.madrid42.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/25 19:32:41 by liglesia          #+#    #+#             */
-/*   Updated: 2022/07/27 16:04:08 by liglesia         ###   ########.fr       */
+/*   Created: 2022/03/24 17:54:04 by liglesia          #+#    #+#             */
+/*   Updated: 2022/03/26 16:59:57 by liglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	*ft_memset(void *str, int c, size_t n)
 {
+	unsigned char	*aux;
 	unsigned int	i;
-	char			*aux;
 
-	aux = s;
+	aux = str;
 	i = 0;
 	while (i < n)
 	{
-		aux[i] = '\0';
+		aux[i] = c;
 		i++;
 	}
+	return (str);
 }
-
 /*
-int	main(void)
+int main(void)
 {
-    char *s = "Tiene algo dentro";
+    char str[] = "Tiene algo dentro";
+    int c;
     size_t n;
 
+    c = 56;
     n = 6;
-    ft_bzero(s, n);
-    char *s = "\0\0\0\0\0\0algo dentro";
-    printf("%s", s + n); // Como deja de imprimir a partir de \0, 
-	le pongo +n para probrar que sigue el resto del 
-	contenido de s.
-	// printf("%s", bzero(s, n)); // La función oficial
+    ft_memset(str + 6, c, n);
+    printf("%s", str);
+    // printf("%s", memset(str, c, n)); // La función oficial
     return (0);
-}
-*/
-/*
-The bzero() function writes n zeroed bytes to the string s.  If n is
-     zero, bzero() does nothing.
-*/
+} */
