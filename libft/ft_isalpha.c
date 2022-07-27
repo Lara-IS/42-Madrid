@@ -6,7 +6,7 @@
 /*   By: liglesia <liglesia@student.madrid42.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 12:16:48 by liglesia          #+#    #+#             */
-/*   Updated: 2022/07/20 13:41:01 by liglesia         ###   ########.fr       */
+/*   Updated: 2022/07/27 15:38:17 by liglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int main(void)
 	printf("%d", isalpha(c)); // La función oficial
     return (0);
 } 
-
+*/
 /*
  The isalpha() function tests for any character for which isupper(3) or
      islower(3) is true.  The value of the argument must be representable as

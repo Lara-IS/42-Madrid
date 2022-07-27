@@ -6,7 +6,7 @@
 /*   By: liglesia <liglesia@student.madrid42.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 16:49:00 by liglesia          #+#    #+#             */
-/*   Updated: 2022/07/20 17:10:49 by liglesia         ###   ########.fr       */
+/*   Updated: 2022/07/27 15:28:10 by liglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,11 @@ int	main(void)
 	return (0);
 }
 
+*/
 
-/* 
-The strlcpy() function copies up to size - 1 characters from the NUL-terminated string src to dst, NUL-terminating the result.
-
-
+/*
+The strlcpy() function copies up to size - 1 characters from the
+NUL-terminated string src to dst, NUL-terminating the result.
 copy and concatenate strings with the same input parameters.
 	Take the full size of the destination buffer and
      guarantee NUL-termination if there is room.  Note that room for the NUL
@@ -59,4 +59,4 @@ copy and concatenate strings with the same input parameters.
 
      strlcpy() copies up to dstsize - 1 characters from the string src to dst,
      NUL-terminating the result if dstsize is not 0. 
-	 return the total length of the string they tried to create*/
+	 return the total length of the string they tried to create */

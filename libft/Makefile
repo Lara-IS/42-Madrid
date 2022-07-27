@@ -6,45 +6,47 @@
 #    By: liglesia <liglesia@student.madrid42.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/31 19:58:00 by liglesia          #+#    #+#              #
-#    Updated: 2022/07/20 18:06:15 by liglesia         ###   ########.fr        #
+#    Updated: 2022/07/27 15:39:41 by liglesia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-# https://www.youtube.com/watch?v=Dtn7kBtaKBM&list=PLMa9fq02Eqo-6-LRcDQ786lRYi7W3bW9i&index=3
 NAME = 	libft.a
 
-SRCS =  ft_bzero.c isalpha.c isdigit.c isalnum.c isascii.c isprint.c strlen.c memset.c bzero.c memcpy.c memmove.c strlcpy.c 
+SRCS =  ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_memcpy.c ft_memmove.c  ft_strlcpy.c  ft_strlen.c   
 
-OBJS = ${SRCS:.c =.o}
+OBJS = ${SRCS:.c=.o}
 
-BONUS = #
+# BONUS = #
 
-BONUS_OBJS = #
+# BONUS_OBJS = #
+
+CC = gcc 
 
 CFLAGS = -Wall -Wextra -Werror
 
-CC = gcc
-
-.c.o:
-	@${CC} ${CFLAGS} -g -c $< -o ${<:.c=.o}
-
 RM = rm -f
 
-${NAME}: ${OBJS}
-		ar -rc $(NAME) $(OBJS) 
-			
+AR = ar -rc
 
+#Crear librería & CC:
+${NAME}: ${OBJS}
+		${AR} ${NAME} ${OBJS}
+		${CC} ${CFLAGS} ${OBJS} 
+		
 all:	${NAME}
 
-bonus:			$(OBJS) $(BONUS_OBJS)
-				ar -rc $(NAME) $(OBJS) $(BONUS_OBJS)
+#bonus:	$(OBJS) $(BONUS_OBJS)
+#		${CC} ${CFLAGS} ${NAME} ${OBJS} ${BONUS_OBJS}
 				
-clean:	${OBJS}
+clean:	
+		${RM} ${OBJS}
 
-fclean:		clean
-			${RM} ${NAME}
+fclean:	clean
+		${RM} ${NAME}
 
-re: fclean ${NAME}
+re: fclean all
 
 .PHONY: clean fclean re all bonus
+
+# https://www.youtube.com/watch?v=Dtn7kBtaKBM&list=PLMa9fq02Eqo-6-LRcDQ786lRYi7W3bW9i&index=3
