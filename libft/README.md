@@ -30,24 +30,31 @@ Empezarán con el prefijo “ft_”. Por ejemplo, strlen se convertirá en ft_st
 - ft_isascii.c OK
 - ft_isdigit.c OK
 - ft_isprint.c OK
+- ft_memchr.c
+- ft_memcmp.c
 - ft_memcpy.c 
-[fail]: your memcpy's return is false/doesn't work with basic params
-[crash]: your memcpy does not behave well with NULL as both params with size
+	[fail]: your memcpy's return is false/doesn't work with basic params
+	[crash]: your memcpy does not behave well with NULL as both params with size
 - ft_memmove.ce
-[crash]: your memmove's return is false/does not work with basic input
-[crash]: your memmove does not work with integers copy
-[fail]: your memmove does not support the overlap (test 1)
-[crash]: your memmove does not support the overlap (test 2)
-[crash]: your memmove does not support the overlap
-[crash]: your memmove crash because it read too many bytes or attempt to read on dst !
-[crash]: your memmove does not well with NULL as both parameters
-[crash]: your memmove does not well with NULL as both parameters and size
-- ft_strlcopy.c
-[fail]: your strlcpy does not works with basic input
-[fail]: your strlcpy overflow the dest
-[fail]: your strlcpy does works whe size < strlen(src)
-[fail]: your strlcpy does not works with 0-length string
+	[crash]: your memmove's return is false/does not work with basic input
+	[crash]: your memmove does not work with integers copy
+	[fail]: your memmove does not support the overlap (test 1)
+	[crash]: your memmove does not support the overlap (test 2)
+	[crash]: your memmove does not support the overlap
+	[crash]: your memmove crash because it read too many bytes or attempt to read on dst !
+	[crash]: your memmove does not well with NULL as both parameters
+	[crash]: your memmove does not well with NULL as both parameters and size
+- ft_memset.c
+- ft_strlcat.c
+- ft_strlcpy.c
+	[fail]: your strlcpy does not works with basic input
+	[fail]: your strlcpy overflow the dest
+	[fail]: your strlcpy does works whe size < strlen(src)
+	[fail]: your strlcpy does not works with 0-length string
 - ft_strlen.c OK
+- ft_strncmp.c
+- ft_tolower.c
+- ft_toupper.c
 
 
 

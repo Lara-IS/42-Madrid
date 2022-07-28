@@ -6,7 +6,7 @@
 /*   By: liglesia <liglesia@student.madrid42.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 18:31:05 by liglesia          #+#    #+#             */
-/*   Updated: 2022/07/20 17:55:44 by liglesia         ###   ########.fr       */
+/*   Updated: 2022/07/27 16:47:55 by liglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	return (ft_strlen(dst) + ft_strlen(src));
 }
 
+/*
 int main(void)
 {
 	char dst[] = "123456";
@@ -48,7 +49,7 @@ int main(void)
 	// printf("oficial: %d\n", strlcat(dst, src, dstsize));
 	return (0);
 }
-
+*/
 /* functions return the total length of the string they tried to create.
 	 For strlcat() that means the initial length of dst plus
      the length of src */
