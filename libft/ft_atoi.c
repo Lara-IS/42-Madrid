@@ -6,7 +6,7 @@
 /*   By: liglesia <liglesia@student.madrid42.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 16:56:23 by liglesia          #+#    #+#             */
-/*   Updated: 2022/07/28 18:52:35 by liglesia         ###   ########.fr       */
+/*   Updated: 2022/07/29 17:01:14 by liglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,30 +16,40 @@ int	ft_atoi(const char *str)
 {
 	int	num;
 	int	i;
+	int	*y;
+	int	resultado;
 
 	i = 0;
+	y = 0;
 	num = 0;
-	while (str[i] != "\0")
+	resultado = '\0';
+	while (str[i] != '\0')
 	{
-		if (ft_isalpha[str[i]])
+		if ((str[i] >= 'A' && str[i] <= 'Z') \
+		|| (str[i] >= 'a' && str[i] <= 'z'))
 		{
+			num[y] = str[i] - 0;
 			i++;
-			num = str - "0";
+			y++;
+			resultado = resultado + num;
 		}
-		
-		return (num);
 	}
+	return (resultado);
 }
 
 int	main(void)
 {
-	const char	*str = "Hola";
-	int			num;
+	const char	*str = "1234";
+	int			x;
+	int			z;
 
-	num =	ft_atoi(str);
+	x = ft_atoi(str);
+	z = atoi(str);
+	printf("%d", x);
+	printf("%d", z);
 	return (0);
 }
 
-/*
-The atoi() function converts the initial portion of the string pointed to by str to int representation.
+/* The atoi() function converts the initial portion of the \
+string pointed to by str to int representation.
 thread-safe and async-cancel-safe. */

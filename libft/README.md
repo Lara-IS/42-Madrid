@@ -71,11 +71,11 @@ Empezarán con el prefijo “ft_”. Por ejemplo, strlen se convertirá en ft_st
 	[fail]: your strlcpy does not works with 0-length string
 - ft_tolower.c
 - ft_toupper.c
-ft_strlcat:    [MISSING]
-ft_strnstr:    [MISSING]
-ft_atoi:       [MISSING]
-ft_calloc:     [MISSING]
-ft_strdup:     [MISSING]
+- ft_strlcat:    [MISSING]
+- ft_strnstr:    [MISSING]
+- ft_atoi:       [MISSING]
+- ft_calloc:     [MISSING]
+- ft_strdup:     [MISSING]
 
 
 Con malloc():

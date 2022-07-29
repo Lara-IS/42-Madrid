@@ -6,7 +6,7 @@
 /*   By: liglesia <liglesia@student.madrid42.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 13:07:17 by liglesia          #+#    #+#             */
-/*   Updated: 2022/07/28 17:58:59 by liglesia         ###   ########.fr       */
+/*   Updated: 2022/07/29 17:09:02 by liglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # include <ctype.h>
 # include <string.h>
 
+
+int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
@@ -39,4 +41,6 @@ char	*ft_strrchr(const char *s, int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 
+void	free(void *ptr); // ¿Estas hay que crearlas con ft_?
+void	*malloc(size_t size); 
 #endif

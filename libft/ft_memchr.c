@@ -6,7 +6,7 @@
 /*   By: liglesia <liglesia@student.madrid42.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 15:04:39 by liglesia          #+#    #+#             */
-/*   Updated: 2022/07/28 16:00:52 by liglesia         ###   ########.fr       */
+/*   Updated: 2022/07/29 17:03:10 by liglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			i++;
 		}
 	}
-	return ("\0");
+	return ('\0');
 }
 /*
 int main(void)
@@ -50,3 +50,9 @@ int main(void)
     printf("%p\n", memchr(s, c, n)); // La función oficial
     return (0);
 } */
+
+
+/*The memchr() function locates the first occurrence of c (converted to an
+     unsigned char) in string s.
+	 The memchr() function returns a pointer to the byte located, or NULL if
+     no such byte exists within n bytes. */ 

@@ -1,37 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: liglesia <liglesia@student.madrid42.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/26 16:49:32 by liglesia          #+#    #+#             */
-/*   Updated: 2022/07/29 17:58:52 by liglesia         ###   ########.fr       */
+/*   Created: 2022/07/29 16:21:39 by liglesia          #+#    #+#             */
+/*   Updated: 2022/07/29 16:46:46 by liglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+char	*strdup(const char *s1)
 {
-	unsigned char	b;
-
-	b = c;
-	if (b >= 'a' && b <= 'z')
-	{
-		c = b - 32;
-	}
-	return (c);
 }
-/*
-int	main(void)
-{
-	int c;
-	unsigned char b;
 
-	b = 0;
-	c = 97;
-	printf("%d\n", ft_toupper(c));
-	printf("%d", toupper(c));
-	return(0);
-} */
+/* The strdup() function allocates sufficient memory for a copy of the
+     string s1, does the copy, and returns a pointer to it.  The pointer may
+     subsequently be used as an argument to the function free(3).
+	    If insufficient memory is available, NULL is returned and errno is set to
+     ENOMEM. */
