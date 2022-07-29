@@ -24,14 +24,19 @@ mismos prototipos e implementarán los mismos comportamientos que las funciones 
 nales. Deberán ser tal y como las describe el man. La única diferencia será la nomenclatura.
 Empezarán con el prefijo “ft_”. Por ejemplo, strlen se convertirá en ft_strlen.
 
-- <font color = green> ft_bzero.c OK
+- ft_bzero.c OK
 - ft_isalnum.c OK
 - ft_isalpha.c OK
 - ft_isascii.c OK
 - ft_isdigit.c OK
 - ft_isprint.c OK
-- ft_memchr.c
-- ft_memcmp.c
+- ft_memchr.c 
+	[fail]: your memchr failed to find a \0
+- ft_memcmp.c 
+	ft_memcmp:     [OK] [OK] [OK] [OK] [FAILED] [FAILED] [FAILED] [OK] [OK] [OK] 
+	[fail]: your memcmp does not cast the memory in unsigned char
+	[fail]: your memcmp stop at \0
+	[fail]: your memcmp does not work with basic input
 - ft_memcpy.c 
 	[fail]: your memcpy's return is false/doesn't work with basic params
 	[crash]: your memcpy does not behave well with NULL as both params with size
@@ -44,7 +49,7 @@ Empezarán con el prefijo “ft_”. Por ejemplo, strlen se convertirá en ft_st
 	[crash]: your memmove crash because it read too many bytes or attempt to read on dst !
 	[crash]: your memmove does not well with NULL as both parameters
 	[crash]: your memmove does not well with NULL as both parameters and size
-- ft_memset.c
+- ft_memset.c OK
 - ft_strlcat.c
 - ft_strlcpy.c
 	[fail]: your strlcpy does not works with basic input
@@ -53,10 +58,24 @@ Empezarán con el prefijo “ft_”. Por ejemplo, strlen se convertirá en ft_st
 	[fail]: your strlcpy does not works with 0-length string
 - ft_strlen.c OK
 - ft_strncmp.c
+	ft_strncmp:    [OK] [OK] [OK] [OK] [FAILED] [FAILED] [FAILED] [OK] [OK] [FAILED] [OK] [OK] [OK] [OK] 
+	[fail]: your strncmp does not work with zero length string
+	[fail]: your strncmp does not work with zero length string
+	[fail]: your strncmp does not cast in unsigned char the diff
+	[fail]: your strncmp does not work with non ascii chars
+- ft_strlcpy: 
+	[FAILED] [OK] [FAILED] [FAILED] [FAILED] [OK] [OK] 
+	[fail]: your strlcpy does not works with basic input
+	[fail]: your strlcpy overflow the dest
+	[fail]: your strlcpy does works whe size < strlen(src)
+	[fail]: your strlcpy does not works with 0-length string
 - ft_tolower.c
 - ft_toupper.c
-
-
+ft_strlcat:    [MISSING]
+ft_strnstr:    [MISSING]
+ft_atoi:       [MISSING]
+ft_calloc:     [MISSING]
+ft_strdup:     [MISSING]
 
 
 Con malloc():

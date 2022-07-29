@@ -6,7 +6,7 @@
 /*   By: liglesia <liglesia@student.madrid42.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 15:04:39 by liglesia          #+#    #+#             */
-/*   Updated: 2022/07/27 16:25:41 by liglesia         ###   ########.fr       */
+/*   Updated: 2022/07/28 16:00:52 by liglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,11 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			return ((void *)&aux[i]);
 		}
 		else
+		{
 			i++;
+		}
 	}
-	return (NULL);
+	return ("\0");
 }
 /*
 int main(void)
